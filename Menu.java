@@ -2,6 +2,7 @@ package conta;
 
 import java.util.Scanner;
 
+import conta.model.Conta;
 import conta.util.Cores;
 
 public class Menu {
@@ -12,6 +13,20 @@ public class Menu {
 		int opcao, numero, agencia, tipo, aniversario, numeroDestino;
 		String titular;
 		float saldo, limite, valor;
+		
+		Conta c1 = new Conta(1,123,1,"Jeniffer Souza",1000000.00f);
+		
+		c1.visualizar();
+		
+		c1.sacar(2000000.0f);
+		c1.visualizar();
+		
+		c1.depositar(200.0f);
+		c1.visualizar();
+		
+		
+		System.out.println("Saldo da conta"+ c1.getSaldo());
+		c1.setTitular("Jeniffer Souza Ribeiro");
 
 		while (true) {
 
