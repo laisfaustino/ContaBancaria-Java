@@ -3,6 +3,8 @@ package conta;
 import java.util.Scanner;
 
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 import conta.util.Cores;
 
 public class Menu {
@@ -14,23 +16,31 @@ public class Menu {
 		String titular;
 		float saldo, limite, valor;
 		
-		Conta c1 = new Conta(1,123,1,"Jeniffer Souza",1000000.00f);
-		
+		Conta c1 = new Conta(1, 123, 1, "Jeniffer Souza", 100000.00f);
 		c1.visualizar();
 		
-		c1.sacar(2000000.0f);
-		c1.visualizar();
+		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Gabriel Machado", 100000.00f, 1000.00f);
+		cc1.visualizar();
 		
-		c1.depositar(200.0f);
-		c1.visualizar();
+		cc1.sacar(100900);
+		
+		cc1.visualizar();
+		
+		cc1.depositar(2000);
+		
+		cc1.visualizar();
 		
 		
-		System.out.println("Saldo da conta"+ c1.getSaldo());
-		c1.setTitular("Jeniffer Souza Ribeiro");
-
+		ContaPoupanca cp1 = new ContaPoupanca(2, 123, 2, "Maria dos Santos", 100000.0f, 15);
+		cp1.visualizar();
+        cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
+		
 		while (true) {
 
-			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "*****************************************************");
+			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + "*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BRAZIL COM Z                ");
 			System.out.println("                                                     ");
@@ -196,8 +206,8 @@ public class Menu {
 
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
-		System.out.println("Lais Faustino - laisfaustino@hotmail.com");
-		System.out.println("github.com/laisfaustino");
+		System.out.println("Rafael Queiróz - rafaelproinfo@gmail.com");
+		System.out.println("github.com/rafaelq80");
 		System.out.println("*********************************************************");
 	}
 }
