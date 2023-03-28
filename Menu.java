@@ -16,18 +16,9 @@ public class Menu {
 		String titular;
 		float saldo, limite, valor;
 		
-		Conta c1 = new Conta(1, 123, 1, "Jeniffer Souza", 100000.00f);
-		c1.visualizar();
+		
 		
 		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Gabriel Machado", 100000.00f, 1000.00f);
-		cc1.visualizar();
-		
-		cc1.sacar(100900);
-		
-		cc1.visualizar();
-		
-		cc1.depositar(2000);
-		
 		cc1.visualizar();
 		
 		
@@ -206,8 +197,8 @@ public class Menu {
 
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
-		System.out.println("Rafael Queiróz - rafaelproinfo@gmail.com");
-		System.out.println("github.com/rafaelq80");
+		System.out.println("Lais Faustino - laisfaustino@hotmail.com");
+		System.out.println("github.com/laisfaustino");
 		System.out.println("*********************************************************");
 	}
 }
